@@ -4,7 +4,7 @@
 
 ## screen shot
 
-![Benchmark result](https://github.com/shengwanlin/SWLWaterFall/screenShot.png)
+![Benchmark result](https://raw.githubusercontent.com/shengwanlin/SWLWaterFall/master/screenShot.png)
 
 ## 使用方法
 
