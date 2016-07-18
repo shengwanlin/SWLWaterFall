@@ -7,9 +7,9 @@
 //
 
 #import "CustomCollectionViewController.h"
-#import "SWLWaterFallLayout.h"
+#import "SSWaterFallLayout.h"
 
-@interface CustomCollectionViewController () <SWLWaterFallLayoutDelegate>
+@interface CustomCollectionViewController () <SSWaterFallLayoutDelegate>
 
 @property (nonatomic, strong) NSArray *images;
 @property (nonatomic, strong) NSMutableArray *cellHeightArray;
@@ -25,7 +25,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    ((SWLWaterFallLayout *)self.collectionView.collectionViewLayout).delegate = self;
+    ((SSWaterFallLayout *)self.collectionView.collectionViewLayout).delegate = self;
     
     // Do any additional setup after loading the view.
     
@@ -60,7 +60,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
-/// 随机生成cell的高度
+/// random height 随机生成cell的高度 
 - (void)initCellsHeights
 {
     _cellHeightArray = [[NSMutableArray alloc] initWithCapacity:_images.count];
@@ -98,17 +98,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark - WLWaterFallLayoutDelegate
 
-- (NSUInteger)numberOfColumnCountWithlayout:(SWLWaterFallLayout *)layout
+- (NSUInteger)numberOfColumnCountWithlayout:(SSWaterFallLayout *)layout
 {
     return 2;
 }
 
-- (CGFloat)lineSpacingWithlayout:(SWLWaterFallLayout *)layout
+- (CGFloat)lineSpacingWithlayout:(SSWaterFallLayout *)layout
 {
     return 2.f;
 }
 
-- (CGFloat)SWLWaterFallLayout:(SWLWaterFallLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)SWLWaterFallLayout:(SSWaterFallLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self.cellHeightArray[indexPath.row] floatValue];
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 sunvlink. All rights reserved.
 //
 
-#import "SWLWaterFallLayout.h"
+#import "SSWaterFallLayout.h"
 
-@implementation SWLWaterFallLayout 
+@implementation SSWaterFallLayout 
 {
     // section的数量
     NSUInteger _numberOfSections;
@@ -71,7 +71,7 @@
     // 设置每个cell的frame位置
     CGRect frame = CGRectZero;
     
-    CGFloat cellHeight = _delegate?[_delegate SWLWaterFallLayout:self heightForItemAtIndexPath:indexPath]:0;
+    CGFloat cellHeight = _delegate?[_delegate SSWaterFallLayout:self heightForItemAtIndexPath:indexPath]:0;
     
     NSUInteger minYIndex = [self minYIndexAtArray:_cellYArray];
     

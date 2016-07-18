@@ -16,7 +16,7 @@
 		805FBE9A1C3BA13E00F822E8 /* waterfallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 805FBE991C3BA13E00F822E8 /* waterfallTests.m */; };
 		805FBEA51C3BA13E00F822E8 /* waterfallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 805FBEA41C3BA13E00F822E8 /* waterfallUITests.m */; };
 		805FBEB91C3BB60F00F822E8 /* CustomCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 805FBEB81C3BB60F00F822E8 /* CustomCollectionViewController.m */; };
-		807F92841C62EAFC00ADF960 /* SWLWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 807F92831C62EAFC00ADF960 /* SWLWaterFallLayout.m */; };
+		807F92841C62EAFC00ADF960 /* SSWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 807F92831C62EAFC00ADF960 /* SSWaterFallLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		805FBEA61C3BA13E00F822E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		805FBEB71C3BB60F00F822E8 /* CustomCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewController.h; sourceTree = "<group>"; };
 		805FBEB81C3BB60F00F822E8 /* CustomCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewController.m; sourceTree = "<group>"; };
-		807F92821C62EAFC00ADF960 /* SWLWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLWaterFallLayout.h; sourceTree = "<group>"; };
-		807F92831C62EAFC00ADF960 /* SWLWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLWaterFallLayout.m; sourceTree = "<group>"; };
+		807F92821C62EAFC00ADF960 /* SSWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSWaterFallLayout.h; sourceTree = "<group>"; };
+		807F92831C62EAFC00ADF960 /* SSWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWaterFallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +151,8 @@
 		805FBEB21C3BA19D00F822E8 /* SWLWaterFallLayout */ = {
 			isa = PBXGroup;
 			children = (
-				807F92821C62EAFC00ADF960 /* SWLWaterFallLayout.h */,
-				807F92831C62EAFC00ADF960 /* SWLWaterFallLayout.m */,
+				807F92821C62EAFC00ADF960 /* SSWaterFallLayout.h */,
+				807F92831C62EAFC00ADF960 /* SSWaterFallLayout.m */,
 			);
 			path = SWLWaterFallLayout;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				805FBE871C3BA13E00F822E8 /* ViewController.m in Sources */,
-				807F92841C62EAFC00ADF960 /* SWLWaterFallLayout.m in Sources */,
+				807F92841C62EAFC00ADF960 /* SSWaterFallLayout.m in Sources */,
 				805FBE841C3BA13E00F822E8 /* AppDelegate.m in Sources */,
 				805FBEB91C3BB60F00F822E8 /* CustomCollectionViewController.m in Sources */,
 				805FBE811C3BA13E00F822E8 /* main.m in Sources */,
