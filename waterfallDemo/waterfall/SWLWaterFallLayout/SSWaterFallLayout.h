@@ -13,11 +13,11 @@
 @protocol SSWaterFallLayoutDelegate <NSObject>
 
 @required
-/// number of columns   设置列数
+/// number of columns
 - (NSUInteger)numberOfColumnCountWithlayout:(SSWaterFallLayout *)layout;
-/// line spacing        设置间距
+/// line spacing
 - (CGFloat)lineSpacingWithlayout:(SSWaterFallLayout *)layout;
-/// height of item at indexPath   每个item的高度
+/// height of item at indexPath  
 - (CGFloat)SSWaterFallLayout:(SSWaterFallLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath;
 @end
 

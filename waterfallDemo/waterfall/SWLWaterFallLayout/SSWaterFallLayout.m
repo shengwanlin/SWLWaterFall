@@ -10,19 +10,18 @@
 
 @implementation SSWaterFallLayout 
 {
-    // section的数量
     NSUInteger _numberOfSections;
-    // section中cell的数量
+
     NSUInteger _numberOfItemsInSection;
-    // 瀑布流的列数
+
     NSUInteger _columnCount;
-    // cell边距
+
     CGFloat _padding;
-    // cell的宽度
+
     CGFloat _cellWidth;
-    // 每列cell的x坐标
+    
     NSMutableArray *_cellXArray;
-    // 每列cell的offset Y
+
     NSMutableArray *_cellYArray;
 }
 
@@ -44,7 +43,6 @@
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    // 初始化每列cell的y坐标
     _cellYArray = [[NSMutableArray alloc] initWithCapacity:_columnCount];
     for (int i = 0; i < _columnCount; i ++) {
         [_cellYArray addObject:@(0)];
@@ -68,7 +66,6 @@
 {
     UICollectionViewLayoutAttributes *layoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    // 设置每个cell的frame位置
     CGRect frame = CGRectZero;
     
     CGFloat cellHeight = _delegate?[_delegate SSWaterFallLayout:self heightForItemAtIndexPath:indexPath]:0;
@@ -82,7 +79,6 @@
     frame = CGRectMake(cellX, cellY, _cellWidth, cellHeight);
     layoutAttributes.frame = frame;
     
-    // 更新数组中的offset Y
     _cellYArray[minYIndex] = @(cellY + cellHeight + _padding);
     
     return layoutAttributes;
@@ -90,30 +86,28 @@
 
 #pragma mark - Initialize
 
-/// 初始化数据
 - (void)initData
 {
     _numberOfSections = [self.collectionView numberOfSections];
     _numberOfItemsInSection = [self.collectionView numberOfItemsInSection:0];
     
-    // 自定义列数、间距、高度等
     if (_delegate) {
         _columnCount = [_delegate numberOfColumnCountWithlayout:self];
         _padding = [_delegate lineSpacingWithlayout:self];
     }
-    // 默认值 default values
+    
     else {
         _columnCount = 2;
         _padding = 2.f;
     }
 }
-/// 初始化cell的frame
+
 - (void)initCellWidth
 {
-    // 计算cell的宽
+
     _cellWidth = ([[UIScreen mainScreen] bounds].size.width - (_columnCount - 1) * _padding) / _columnCount;
     
-    // 计算每列cell的x坐标
+
     _cellXArray = [[NSMutableArray alloc] initWithCapacity:_columnCount];
     
     for (int i = 0; i < _columnCount; i ++) {
@@ -126,7 +120,6 @@
 
 #pragma mark -
 
-/// 计算数组中的最大值
 - (CGFloat)maxCellYAtArray:(NSArray *)array
 {
     if (!array.count) {
@@ -146,7 +139,7 @@
     }
     return maxY;
 }
-/// 计算数组中的最小元素的'索引' index
+
 - (NSUInteger)minYIndexAtArray:(NSArray *)array
 {
     if (!array.count) {
